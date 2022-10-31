@@ -8,7 +8,7 @@ class Post
         [
             "title" => "Judul Tulisan Pertama",
             "slug" => "judul-tulisan-pertama",
-            "author" => "Andrie Firmansyah",
+            "author" => "Rafi Nuril Akbar Firmansyah",
             "body" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste perspiciatis sint harum hic, nisi, nemo, necessitatibus dolores illo assumenda eligendi placeat eius cumque? Optio, nam quo. Minima dolorem asperiores repellat iure cum impedit, repellendus quasi aspernatur repudiandae iste soluta consequuntur, eligendi ipsam. Quae maxime rem id, reprehenderit ullam nihil aliquid quisquam, accusamus corrupti eveniet nemo temporibus pariatur sapiente minus molestiae velit est eos optio laudantium consequuntur? Error, id iure. Numquam non fugit doloribus rem illum et harum commodi corrupti nemo."
         ],
     
