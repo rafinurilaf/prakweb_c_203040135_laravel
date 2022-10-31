@@ -28,9 +28,9 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
-        "name" => "Andrie Firmansyah",
-        "email" => "andriefirmansyah334@gmail.com",
-        "image" => "andrie.jpg"
+        "name" => "Rafi Nuril Akbar F",
+        "email" => "rafinafirmansyah29@gmail.com",
+        "image" => "rafinuril.jpg"
     ]);
 });
 
