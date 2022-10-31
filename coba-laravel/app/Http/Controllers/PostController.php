@@ -3,16 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
+use Symfony\Component\CssSelector\XPath\Extension\FunctionExtension;
 
 class PostController extends Controller
 {
     public function index()
     {
+        $title = '';
+        if (request('category')) {
+            $category = Category::firstWhere('slug', request('category'));
+            $title = ' in : ' . $category->name;
+        }
+
+        if (request('author')) {
+            $author = User::firstWhere('username', request('author'));
+            $title = ' by : ' . $author->name;
+        }
+
         return view('posts', [
-            "title" => "All Posts",
-            // "posts" => Post::all()
-            "posts" => Post::with(['author', 'category'])->latest()->get()
+            "title" => "All Posts" . $title,
+            "active" => 'posts',
+            "posts" => Post::latest()->filter(request(['search', 'category', 'author']))
+                ->paginate(7)->withQueryString()
         ]);
     }
 
@@ -20,7 +35,8 @@ class PostController extends Controller
     {
         return view('post', [
             "title" => "Single Post",
-            "post" => $post,
+            "active" => 'posts',
+            "post" => $post
         ]);
     }
 }

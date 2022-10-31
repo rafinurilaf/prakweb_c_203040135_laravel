@@ -2,23 +2,24 @@
 
 namespace App\Models;
 
-class Post 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post
 {
-    private static $blog_posts =  [
+    private static $blog_posts = [
         [
-            "title" => "Judul Tulisan Pertama",
-            "slug" => "judul-tulisan-pertama",
-            "author" => "Rafi Nuril Akbar Firmansyah",
-            "body" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste perspiciatis sint harum hic, nisi, nemo, necessitatibus dolores illo assumenda eligendi placeat eius cumque? Optio, nam quo. Minima dolorem asperiores repellat iure cum impedit, repellendus quasi aspernatur repudiandae iste soluta consequuntur, eligendi ipsam. Quae maxime rem id, reprehenderit ullam nihil aliquid quisquam, accusamus corrupti eveniet nemo temporibus pariatur sapiente minus molestiae velit est eos optio laudantium consequuntur? Error, id iure. Numquam non fugit doloribus rem illum et harum commodi corrupti nemo."
+            "title" => "Suatu Sikap Untuk Bersikap Bodo Amat",
+            "slug" => "judul-post-pertama",
+            "author" => "Renandra Rahadian Putri",
+            "body" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur repellat nostrum obcaecati, nemo, doloremque tempora vel quis sit enim suscipit laudantium voluptatum dolorem nesciunt. Dolor porro unde pariatur eius laborum maiores assumenda, a, aut officiis, beatae fugit optio? Cumque quidem corporis veritatis ducimus eos natus reprehenderit sed unde id assumenda laboriosam velit necessitatibus soluta nesciunt accusamus aperiam porro, consequatur odio quos est magnam dolor modi praesentium. Veritatis expedita tenetur itaque nam praesentium assumenda, deserunt molestiae facilis aliquam, accusantium quasi accusamus?"
         ],
-    
         [
-            "title" => "Judul Tulisan Kedua",
-            "slug" => "judul-tulisan-kedua",
-            "author" => "Han",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis unde et id cumque amet nesciunt, distinctio vero odit dicta omnis totam deserunt beatae aut quasi nostrum! Esse blanditiis quam sed quod minima inventore eius incidunt fuga fugiat dolorem, omnis dignissimos explicabo quisquam nostrum porro dolor, quibusdam iure aut. Alias doloribus, maxime iste necessitatibus dolore, ut repudiandae nihil quae aliquam cum velit, tempore quas. Itaque quasi molestiae exercitationem cumque consectetur, impedit vel qui eius unde provident quidem facilis nam illum libero nobis voluptatibus ipsa animi ratione obcaecati. Ullam beatae mollitia asperiores minima animi nobis nesciunt repudiandae aliquam. Commodi perferendis iure iste."
-        ]
-    
+            "title" => "Suatu Sikap Untuk Bersikap Peduli",
+            "slug" => "judul-post-kedua",
+            "author" => "Ericko Timur Apandi",
+            "body" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ab cupiditate blanditiis accusamus veniam debitis, nisi repellat harum alias! Dolores quasi sequi adipisci odit repellat possimus quibusdam sapiente voluptates quidem, doloremque atque a perspiciatis corrupti labore perferendis nobis iure ad natus fugit voluptatibus. Aut voluptatem ullam ipsum libero odit ab enim non deserunt sunt maxime, cupiditate quas deleniti cum, distinctio similique nulla reprehenderit ad rerum. Laudantium vero illum unde possimus quam culpa alias minima perspiciatis architecto dicta rerum vel fugit minus officia, ratione magnam, voluptate exercitationem vitae ipsum amet! Corrupti eius, esse error dolor aspernatur veritatis nulla repellendus mollitia. Praesentium, ea. Debitis excepturi hic, odio harum nisi, sit labore officiis iure possimus nesciunt reprehenderit amet ex cupiditate expedita minus nemo doloremque fugit inventore beatae illo id laudantium voluptas! Repellat esse ab ea, quis doloribus alias omnis quidem aspernatur, numquam quibusdam nihil doloremque necessitatibus repellendus mollitia perspiciatis laudantium, porro fuga voluptas."
+        ],
     ];
 
     public static function all()
@@ -30,8 +31,8 @@ class Post
     {
         $posts = static::all();
         // $post = [];
-        // foreach($posts as $p) {
-        //     if($p["slug"] === $slug) {
+        // foreach ($posts as $p) {
+        //     if ($p["slug"] === $slug) {
         //         $post = $p;
         //     }
         // }
